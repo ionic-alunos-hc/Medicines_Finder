@@ -21,12 +21,16 @@ export class HomePage {
   }
   //Variavel HappyCode - Initial Location
   initMap(){
-    var locations=[
-      ['Farmacia Dona Amelia',38.766889, -9.161139],
+    var locations = [
+      ['Farmacia Dona Amelia', 38.766889, -9.161139, 0],
+      ['Farmacia Douro', 38.763425, -9.157154, 1],
+      ['Farmacia Alameda', 38.770099, -9.159703, 2],
+      
     ];
+     
     var happycode = {
-      lat: 38.736845,
-      lng: -9.137990
+      lat: 38.7668131,
+      lng: -9.1620008
       };
 
     // Map creation - zoom; map centre points to the coordinates at the variable happycode  
@@ -35,13 +39,35 @@ export class HomePage {
       center: happycode,
       disableDefaultUI: true
     });
+
+    var marker, i;
+    var infowindow = new google.maps.InfoWindow();
+
+    for (i = 0; i < locations.length; i=i+1) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: this.map,
+        icon: {            
+          url: "../assets/imgs/farmacia.png",
+          scaledSize: new google.maps.Size(30, 30)    
+        } 
+      });
+    
+      google.maps.event.addListener(marker, "click", (function(marker, i) {
+        return function() {
+          infowindow.setContent(location[i][0]);
+          infowindow.open(this.map, marker);
+        } 
+      })(marker, i))
+    }
     //marcador vermelho no centro do mapa
     var marker = new google.maps.Marker({
       position: happycode,
       map: this.map,
       title: 'My Position!'
     });
-  }
+  };
+   
   /*
   calculateAndDisplayRoute() {
     this.directionsService.route({
@@ -58,5 +84,5 @@ export class HomePage {
         });
   
   }*/
-
+  
 }
