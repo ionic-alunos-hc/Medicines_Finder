@@ -22,10 +22,9 @@ export class HomePage {
   //Variavel HappyCode - Initial Location
   initMap(){
     var locations = [
-      ['Farmacia Dona Amelia', 38.766889, -9.161139, 0],
-      ['Farmacia Douro', 38.763425, -9.157154, 1],
-      ['Farmacia Alameda', 38.770099, -9.159703, 2],
-      
+      ["Farmacia Dona Amelia", 38.766889, -9.161139, 0],
+      ["Farmacia Douro", 38.763425, -9.157154, 1],
+      ["Farmacia Alameda", 38.770099, -9.159703, 2],
     ];
      
     var happycode = {
@@ -55,34 +54,18 @@ export class HomePage {
     
       google.maps.event.addListener(marker, "click", (function(marker, i) {
         return function() {
-          infowindow.setContent(location[i][0]);
+          infowindow.setContent((locations[i][0]));
           infowindow.open(this.map, marker);
         } 
       })(marker, i))
     }
     //marcador vermelho no centro do mapa
-    var marker = new google.maps.Marker({
+    var marker2 = new google.maps.Marker({
       position: happycode,
       map: this.map,
       title: 'My Position!'
     });
   };
    
-  /*
-  calculateAndDisplayRoute() {
-    this.directionsService.route({
-      origin: this.start,
-      destination: this.end,
-      travelMode: 'DRIVING'
-      }, (response, status) => {
-        if (status === 'OK') {
-          this.directionsDisplay.setDirections(response);
-        } 
-        else {
-          window.alert('Directions request failed due to ' + status);
-        }
-        });
-  
-  }*/
   
 }

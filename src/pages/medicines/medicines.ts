@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BenuronPage } from '../benuron/benuron';
 
 /**
  * Generated class for the MedicinesPage page.
@@ -13,6 +14,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-medicines',
   templateUrl: 'medicines.html',
 })
+
+
+
 export class MedicinesPage {
   selectedItem: any;
   icons: string[];
@@ -40,9 +44,10 @@ export class MedicinesPage {
   
   }
 
+
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(MedicinesPage, {
+    this.navCtrl.push(BenuronPage, {
       item: item
     });
   }
