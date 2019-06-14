@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BenuronPage } from '../benuron/benuron';
 
+import { Item } from '../../models/item';
+import { Items } from '../../providers';
+
 /**
  * Generated class for the MedicinesPage page.
  *
@@ -22,6 +25,8 @@ export class MedicinesPage {
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
   medicamentos: string[];
+
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   
     // If we navigated to this page, we will have an item available as a nav param

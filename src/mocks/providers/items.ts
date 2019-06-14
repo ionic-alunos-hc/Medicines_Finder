@@ -19,7 +19,18 @@ export class Items {
         "name": "Benuron",
         "profilePic": "assets/img/speakers/benuron.jpg",
         "about": "Benuron is for headaches"
+      },
+      {
+        "name": "Nolotil",
+        "profilePic": "assets/img/speakers/nolotil.jpg",
+        "about": "Nolotil is for"
+      },
+      {
+        "name": "Valdisert",
+        "profilePic": "assets/img/speakers/valdispert.jpg",
+        "about": "Valdispert is for"
       }
+
 
     ];
 
