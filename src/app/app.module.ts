@@ -16,19 +16,23 @@ import { MedicinesPage } from '../pages/medicines/medicines';
 import { ItemsProvider } from '../providers/items/items';
 import { ApiProvider } from '../providers/api/api';
 
+import { Items } from '../mocks/providers/items';
+
+import {MedicinesPageModule} from '../pages/medicines/medicines.module';
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
-    MedicinesPage,
+    //MedicinesPage,
     TabsPage,
     BenuronPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    MedicinesPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -41,6 +45,8 @@ import { ApiProvider } from '../providers/api/api';
     BenuronPage
   ],
   providers: [
+    ApiProvider,
+    Items,
     LocalNotifications,
     StatusBar,
     SplashScreen,

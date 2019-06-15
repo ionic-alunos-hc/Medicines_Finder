@@ -1,2 +1,2 @@
-export { Api } from './api/api';
+export { ApiProvider } from '../providers/api/api';
 export { Items } from '../mocks/providers/items';

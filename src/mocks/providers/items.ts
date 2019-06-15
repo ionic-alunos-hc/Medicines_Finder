@@ -29,6 +29,11 @@ export class Items {
         "name": "Valdisert",
         "profilePic": "assets/img/speakers/valdispert.jpg",
         "about": "Valdispert is for"
+      },
+      {
+        "name": "Brufen",
+        "profilePic": "assets/img/speakers/brufen.jpg",
+        "about": "Brufen is an anti inflamatory medicine.",
       }
 
 
