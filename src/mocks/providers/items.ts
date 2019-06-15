@@ -17,23 +17,35 @@ export class Items {
     let items = [
       {
         "name": "Benuron",
-        "profilePic": "assets/img/speakers/benuron.jpg",
-        "about": "Benuron is for headaches"
+        "profilePic": "assets/imgs/benuron.jpg",
+        "about": "",
+        "Farmacia1": "30 caixas",
+        "Farmacia2": "20 caixas", 
+        "Farmacia3": "15 caixas",
       },
       {
         "name": "Nolotil",
-        "profilePic": "assets/img/speakers/nolotil.jpg",
-        "about": "Nolotil is for"
+        "profilePic": "assets/imgs/nolotil.jpg",
+        "about": "",
+        "Farmacia1": "45 caixas",
+        "Farmacia2": "0 caixas", 
+        "Farmacia3": "5 caixas",
       },
       {
-        "name": "Valdisert",
-        "profilePic": "assets/img/speakers/valdispert.jpg",
-        "about": "Valdispert is for"
+        "name": "Valdispert",
+        "profilePic": "assets/imgs/valdispert.jpg",
+        "about": "",
+        "Farmacia1": "0 caixas",
+        "Farmacia2": "0 caixas", 
+        "Farmacia3": "1 caixas",
       },
       {
         "name": "Brufen",
-        "profilePic": "assets/img/speakers/brufen.jpg",
-        "about": "Brufen is an anti inflamatory medicine.",
+        "profilePic": "assets/imgs/brufen.jpg",
+        "about": "",
+        "Farmacia1": "25 caixas",
+        "Farmacia2": "25 caixas", 
+        "Farmacia3": "50 caixas",
       }
 
 
