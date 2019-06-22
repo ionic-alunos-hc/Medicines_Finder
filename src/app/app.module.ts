@@ -19,6 +19,9 @@ import { ApiProvider } from '../providers/api/api';
 import { Items } from '../mocks/providers/items';
 
 import {MedicinesPageModule} from '../pages/medicines/medicines.module';
+import {OrderPageModule} from '../pages/order/order.module';
+import { OrderPage } from '../pages/order/order';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -32,7 +35,8 @@ import {MedicinesPageModule} from '../pages/medicines/medicines.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    MedicinesPageModule
+    MedicinesPageModule,
+    OrderPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,7 +46,8 @@ import {MedicinesPageModule} from '../pages/medicines/medicines.module';
     HomePage,
     TabsPage,
     MedicinesPage,
-    BenuronPage
+    BenuronPage,
+    OrderPage
   ],
   providers: [
     ApiProvider,

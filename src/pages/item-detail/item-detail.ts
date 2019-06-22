@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Items } from '../../providers';
+import { OrderPage } from '../order/order';
 
 /**
  * Generated class for the ItemDetailPage page.
@@ -24,5 +25,10 @@ export class ItemDetailPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemDetailPage');
   }
-
+  goOrderPage() {
+    this.navCtrl.push(OrderPage)
+  }
+  goReservePage() {
+    //this.navCtrl.setRoot(ReservePage);
+  }
 }

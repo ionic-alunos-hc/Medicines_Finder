@@ -8,12 +8,4 @@ import { NavController } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, private localNotifications: LocalNotifications) {
-    this.localNotifications.schedule({
-      text: 'Delayed ILocalNotification',
-      trigger: {at: new Date(new Date().getTime() + 3600)},
-      led: 'FF0000',
-      sound: null
-   });
-  }
 }

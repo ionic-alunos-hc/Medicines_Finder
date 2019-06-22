@@ -1,27 +1,37 @@
 <ion-header>
-
     <ion-navbar>
       <ion-title>{{ item.name }}</ion-title>
     </ion-navbar>
-  
-  </ion-header>
+    
+</ion-header>
   
   
   <ion-content>
     <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
     </div>
+
+    <h2>{{item.name}}</h2>
+    <h5>{{item.about}}</h5>
   
-    <div class="item-detail" padding>
-      <h2>{{item.name}}</h2>
-      <h5>{{item.about}}</h5>
-      <p>Farmacia Dona Amélia: {{item.Farmacia1}}</p>
-      <p>Farmacia Alameda: {{item.Farmacia2}}</p>
-      <p>Farmacia Douro: {{item.Farmacia3}}</p>
-      
+    <ion-list>
+      <ion-item>Farmacia Dona Amélia: {{item.Farmacia1}} caixas</ion-item>
+      <ion-item>Farmacia Alameda: {{item.Farmacia2}} caixas</ion-item>
+      <ion-item>Farmacia Douro: {{item.Farmacia3}} caixas</ion-item>
+    </ion-list>
 
-      
+    <ion-row>
+      <ion-col col-6> 
+        <button ion-button color="secondary" class="button"  (click)="goReservePage()" >
+          <b>Reservar</b>
+        </button>
+      </ion-col>
+    
+      <ion-col col-6>
+        <button ion-button color="default" class="button" (click)="goOrderPage()">
+          <b>Encomendar</b>
+        </button>
+      </ion-col>
+    </ion-row>
 
-
-
-    </div>
+ 
   </ion-content>

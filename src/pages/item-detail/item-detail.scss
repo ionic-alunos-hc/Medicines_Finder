@@ -5,10 +5,17 @@ page-item-detail {
         background-size: cover;
         height: 250px;
       }
+      h2 { text-align: center;}
+      h5 { margin-left: 15px; margin-right: 15px; text-align: justify;}
     
       .item-detail {
         width: 100%;
+        height: auto;
         background: white;
         position: absolute;
+      }
+      .button{
+        width:100%;
+        margin-right:30px; 
       }
 }
